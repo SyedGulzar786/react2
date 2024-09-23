@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Card from './components/card';
-import Input from './components/input';
+import {Card, Input} from "./components"
 function App() {
   const getData = (a) => {
     console.log(a)
