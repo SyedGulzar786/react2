@@ -1,10 +1,10 @@
 function Card({getData,v}){
 console.log(v);
 return (
-    <div className="card">
+    <div className="cardiac">
 <h1>Card</h1>
 <h2>{v}</h2>
-<button onClick={() => getData("GULZAR")}>send data</button>
+<button className="buts" onClick={() => getData("GULZAR")}>send data</button>
     </div>
 )
 }

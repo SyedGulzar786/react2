@@ -9,10 +9,11 @@ function App() {
   const arr = ["one","two","three"]
   return (
 <div className="App">
-
+<Header />
 <Button variant="dark">Dark</Button>
 <Input onChange={(e) => console.log(e.target.value)} />
 {arr.map((v,i) => <Card key={i} v={v} getData={getData} />)}
+<Footer />
 </div>
   );
 }

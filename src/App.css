@@ -1,4 +1,8 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -35,4 +39,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+.buts{
+  height: 50px;
+  width: 50px;
+  background-color: red !important;
+}
+.cardiac{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #282c34 1px solid;
+  margin: 10px;
+  border-radius: 13px;
 }
