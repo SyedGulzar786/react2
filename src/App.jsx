@@ -3,6 +3,9 @@ import IMAGES from './assets/images/weather.jpeg'
 import './App.css';
 import {Card, Input, Header, Footer} from "./components/index.js"
 import Button from 'react-bootstrap/Button';
+import BasicCard from './components/mui_card.jsx';
+import Layouti from './components/ant_layout.jsx';
+
 function App() {
   const getData = (a) => {
     console.log(a)
@@ -15,7 +18,11 @@ function App() {
   }
   const arr = ["one","two","three"]
   return (
-
+<div>
+  <div>
+<Layouti/>
+</div>
+  
 <div className="App">
 <Header />
 <img src={IMAGES} alt="" />
@@ -24,9 +31,11 @@ function App() {
 <Button variant="dark">Dark</Button>
 <Input onChange={(e) => console.log(e.target.value)} />
 {arr.map((v,i) => <Card key={i} v={v} getData={getData} />)}
+<BasicCard />
 <Footer />
 </div>
 
+</div>
   );
 }
 
