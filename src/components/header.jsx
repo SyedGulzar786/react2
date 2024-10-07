@@ -1,6 +1,8 @@
 function Header(){
     return(
-        <h1>Header</h1>
+        <div className="head">
+            <h1>Header</h1>
+        </div>
     )
     }
     export default Header;
