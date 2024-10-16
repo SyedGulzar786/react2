@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import IMAGES from './assets/images/weather.jpeg'
+import IMAGES from './assets/images/weather-removebg-preview.png'
 import './App.css';
 import {Card, Input, Header, Footer} from "./components/index.js"
 import Button from 'react-bootstrap/Button';
@@ -20,20 +20,32 @@ function App() {
   return (
 <div>
   <div>
-<Layouti/>
+<Layouti>
+  <div className='mario-cards'>
+<div> 
+   {arr.map((v,i) => <Card key={i} v={v} getData={getData} />)}
 </div>
-  
+<div>
 <div className="App">
 <Header />
+
 <img src={IMAGES} alt="" />
-<button onClick={() => foo("foo function")} >Click me</button>
-<button onClick={doo} >Call me</button>
+
 <Button variant="dark">Dark</Button>
 <Input onChange={(e) => console.log(e.target.value)} />
-{arr.map((v,i) => <Card key={i} v={v} getData={getData} />)}
+
 <BasicCard />
 <Footer />
 </div>
+</div>
+  </div>
+  <button onClick={() => foo("foo function")} >Click me</button>
+<button onClick={doo} >Call me</button>
+</Layouti>
+
+</div>
+  
+
 
 </div>
   );

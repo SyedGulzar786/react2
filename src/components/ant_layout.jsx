@@ -8,6 +8,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import LOGOS from '../assets/images/weather-removebg-preview.png';
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -28,7 +29,7 @@ const items = [
   getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
   getItem('Files', '9', <FileOutlined />),
 ];
-const Layouti = () => {
+const Layouti = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -40,7 +41,9 @@ const Layouti = () => {
       }}
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        <div className="demo-logo-vertical" />
+        <div className="demo-logo-vertical">\
+          <img src={LOGOS} alt="logo image" />
+        </div>
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout>
@@ -71,7 +74,7 @@ const Layouti = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            Bill is a cat.
+            {children}
           </div>
         </Content>
         <Footer
