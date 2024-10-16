@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import BasicCard from './components/mui_card.jsx';
 import Layouti from './components/ant_layout.jsx';
 import { Component } from 'react';
+import Todo from './components/todo.jsx';
 class Dashboard extends Component {
   constructor() {
     super();
@@ -72,6 +73,7 @@ function App() {
 
 <BasicCard />
 <Footer />
+<Todo />
 </div>
 </div>
   </div>
