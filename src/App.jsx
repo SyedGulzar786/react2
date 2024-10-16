@@ -12,17 +12,28 @@ class Dashboard extends Component {
     this.state = {
       name: "GULZAR",
     };
+    console.log("constructor, first")
   }
   
+  componentDidMount() {
+    console.log("componentDidMount, third")
+  }
+
   updateName() {
+    console.log("selfmade function, unknown")
     console.log(this.state.name)
     this.setState({ name: "SALMAN" });
+
   }
     render(){
+
+      console.log("render, second")
       return (
         <div>
           <h1>{this.state.name}</h1>
           <button onClick={this.updateName.bind(this)} >update the name</button>
+
+          
         </div>
       )
     }

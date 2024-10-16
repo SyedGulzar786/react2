@@ -9,6 +9,7 @@ import {
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import LOGOS from '../assets/images/weather-removebg-preview.png';
+
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -34,6 +35,7 @@ const Layouti = ({ children }) => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+  const [counter,setCounter] = useState(0)
   return (
     <Layout
       style={{
@@ -75,6 +77,8 @@ const Layouti = ({ children }) => {
             }}
           >
             {children}
+            <h1>{counter}</h1>
+            <button onClick={() => setCounter(counter+1)} >update the counter</button>
           </div>
         </Content>
         <Footer
