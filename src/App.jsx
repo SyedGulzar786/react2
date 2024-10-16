@@ -5,6 +5,31 @@ import {Card, Input, Header, Footer} from "./components/index.js"
 import Button from 'react-bootstrap/Button';
 import BasicCard from './components/mui_card.jsx';
 import Layouti from './components/ant_layout.jsx';
+import { Component } from 'react';
+class Dashboard extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "GULZAR",
+    };
+  }
+  
+  updateName() {
+    console.log(this.state.name)
+    this.setState({ name: "SALMAN" });
+  }
+    render(){
+      return (
+        <div>
+          <h1>{this.state.name}</h1>
+          <button onClick={this.updateName.bind(this)} >update the name</button>
+        </div>
+      )
+    }
+
+  
+}
+
 
 function App() {
   const getData = (a) => {
@@ -28,7 +53,7 @@ function App() {
 <div>
 <div className="App">
 <Header />
-
+<Dashboard/>
 <img src={IMAGES} alt="" />
 
 <Button variant="dark">Dark</Button>
