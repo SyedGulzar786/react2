@@ -5,7 +5,7 @@ import {Card, Input, Header, Footer} from "./components/index.js"
 import Button from 'react-bootstrap/Button';
 import BasicCard from './components/mui_card.jsx';
 import Layouti from './components/ant_layout.jsx';
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import Todo from './components/todo.jsx';
 class Dashboard extends Component {
   constructor() {
@@ -54,6 +54,7 @@ function App() {
     console.log("doo function")
   }
   const arr = ["one","two","three"]
+  const [value,setValue] = useState("")
   return (
 <div>
   <div>
@@ -72,6 +73,8 @@ function App() {
 <Input onChange={(e) => console.log(e.target.value)} />
 
 <BasicCard />
+<input type="text" onChange={(e) => {setValue(e.target.value)}} />
+<h1>{value}</h1>
 <Footer />
 <Todo />
 </div>
