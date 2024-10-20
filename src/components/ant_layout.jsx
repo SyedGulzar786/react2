@@ -9,6 +9,7 @@ import {
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import LOGOS from '../assets/images/weather-removebg-preview.png';
+import Counter from './counter';
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -92,7 +93,7 @@ const Layouti = ({ children }) => {
             {children}
             <h1>{value}</h1>
             <button onClick={() => setValue("ahmed")}>update the name</button>
-            <h1>{counter}</h1>
+            {counter < 10 && <Counter count={counter}/>}
             <button onClick={() => setCounter(counter+1)} >+</button>
             <button onClick={() => setCounter(counter-1)} >-</button>
           </div>
