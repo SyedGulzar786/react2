@@ -73,8 +73,10 @@ function App() {
 <Input onChange={(e) => console.log(e.target.value)} />
 
 <BasicCard />
-<input type="text" onChange={(e) => {setValue(e.target.value)}} />
+{/* one way data binding and two way data binding */}
+<input type="text" value={value} onChange={(e) => {setValue(e.target.value)}} />
 <h1>{value}</h1>
+<button onClick={() => setValue("")}>reset thwe value</button>
 <Footer />
 <Todo />
 </div>
