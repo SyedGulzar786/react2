@@ -7,6 +7,7 @@ import BasicCard from './components/mui_card.jsx';
 import Layouti from './components/ant_layout.jsx';
 import { Component, useState } from 'react';
 import Todo from './components/todo.jsx';
+import BasicForm from './components/forms.jsx';
 class Dashboard extends Component {
   constructor() {
     super();
@@ -55,10 +56,30 @@ function App() {
   }
   const arr = ["one","two","three"]
   const [value,setValue] = useState("")
+  const[type,setType] = useState("login")
   return (
 <div>
   <div>
 <Layouti>
+<div className="container">
+  <div className="row justify-content-center">
+
+   {type === "login" 
+    ?
+    <div className="col-6 p-5">
+    <h2>Login</h2>
+    <BasicForm />
+    <Button onClick={() => setType("register")} variant="link">register now</Button>
+    </div> 
+    :
+    <div className="col-6 p-5">
+    <h2>Register</h2>
+    <BasicForm />
+    <Button onClick={() => setType("login")} variant="link">login now</Button>
+    </div> 
+  }
+  </div>
+  </div>
   <div className='mario-cards'>
 <div> 
    {arr.map((v,i) => <Card key={i} v={v} getData={getData} />)}
@@ -76,7 +97,7 @@ function App() {
 {/* one way data binding and two way data binding */}
 <input type="text" value={value} onChange={(e) => {setValue(e.target.value)}} />
 <h1>{value}</h1>
-<button onClick={() => setValue("")}>reset thwe value</button>
+<button onClick={() => setValue("")}>reset the value</button>
 <Footer />
 <Todo />
 </div>
@@ -87,9 +108,6 @@ function App() {
 </Layouti>
 
 </div>
-  
-
-
 </div>
   );
 }
