@@ -44,11 +44,11 @@ const Layouti = ({ children }) => {
     console.log("use effect without passing empty array as second argument","2")
   })
   useEffect(() => {
-    console.log("use effect with passing a state(counter) to an empty array as second argument","3")
+    console.log("use effect with passing a speciffic/particular state(counter) to an empty array as second argument","3")
   },[counter])
   useEffect(() => {
-    console.log("use effect with passing a state(value) to an empty array as second argument","4")
-  },[value])
+    console.log("use effect with passing more than one state(value,counter) to an empty array as second argument","4")
+  },[value,counter])
   return (
     <Layout
       style={{
