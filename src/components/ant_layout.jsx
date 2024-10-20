@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   DesktopOutlined,
   FileOutlined,
@@ -36,6 +36,19 @@ const Layouti = ({ children }) => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
   const [counter,setCounter] = useState(0)
+  const [value,setValue] = useState("ghous")
+  useEffect(() => {
+    console.log("use effect with passing empty array as second argument","1")
+  },[])
+  useEffect(() => {
+    console.log("use effect without passing empty array as second argument","2")
+  })
+  useEffect(() => {
+    console.log("use effect with passing a state(counter) to an empty array as second argument","3")
+  },[counter])
+  useEffect(() => {
+    console.log("use effect with passing a state(value) to an empty array as second argument","4")
+  },[value])
   return (
     <Layout
       style={{
@@ -77,8 +90,11 @@ const Layouti = ({ children }) => {
             }}
           >
             {children}
+            <h1>{value}</h1>
+            <button onClick={() => setValue("ahmed")}>update the name</button>
             <h1>{counter}</h1>
-            <button onClick={() => setCounter(counter+1)} >update the counter</button>
+            <button onClick={() => setCounter(counter+1)} >+</button>
+            <button onClick={() => setCounter(counter-1)} >-</button>
           </div>
         </Content>
         <Footer
