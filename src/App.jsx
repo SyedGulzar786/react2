@@ -47,22 +47,22 @@ class Dashboard extends Component {
 
 function App() {
 
-  const getData = (a) => {
-    console.log(a)
-  }
-  const foo = (b) => {
-    console.log(b)
-  }
-  const doo = () => {
-    console.log("doo function")
-  }
-  const arr = ["one","two","three"]
-  const [value,setValue] = useState("")
-  const[type,setType] = useState("login")
+  // const getData = (a) => {
+  //   console.log(a)
+  // }
+  // const foo = (b) => {
+  //   console.log(b)
+  // }
+  // const doo = () => {
+  //   console.log("doo function")
+  // }
+  // const arr = ["one","two","three"]
+  // const [value,setValue] = useState("")
+  // const[type,setType] = useState("login")
   return (
 <div>
 <AppRouter/>
-  <div>
+  {/* <div>
 <Layouti>
 <div className="container">
   <div className="row justify-content-center">
@@ -97,7 +97,7 @@ function App() {
 <Input onChange={(e) => console.log(e.target.value)} />
 
 <BasicCard />
-{/* one way data binding and two way data binding */}
+one way data binding and two way data binding ____________________________________________________________________//needed!!
 <input type="text" value={value} onChange={(e) => {setValue(e.target.value)}} />
 <h1>{value}</h1>
 <button onClick={() => setValue("")}>reset the value</button>
@@ -110,7 +110,7 @@ function App() {
 <button onClick={doo} >Call me</button>
 </Layouti>
 
-</div>
+</div> */}
 </div>
   );
 }
