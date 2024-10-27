@@ -8,6 +8,7 @@ import Layouti from './components/ant_layout.jsx';
 import { Component, useState } from 'react';
 import Todo from './components/todo.jsx';
 import BasicForm from './components/forms.jsx';
+import AppRouter from './router/index.js';
 class Dashboard extends Component {
   constructor() {
     super();
@@ -45,6 +46,7 @@ class Dashboard extends Component {
 
 
 function App() {
+
   const getData = (a) => {
     console.log(a)
   }
@@ -59,6 +61,7 @@ function App() {
   const[type,setType] = useState("login")
   return (
 <div>
+<AppRouter/>
   <div>
 <Layouti>
 <div className="container">
