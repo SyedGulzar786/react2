@@ -60,8 +60,11 @@ const AppLayout = ({ children }) => {
         <Link to="/about" >
         <div style={{ cursor: 'pointer',color: 'white' }}>About</div>
         </Link>
-        <Link to="/">
+        <Link to="/login">
         <div style={{ cursor: 'pointer',color: 'white' }}>Login</div>
+        </Link>
+        <Link to="/">
+        <div style={{ cursor: 'pointer',color: 'white' }}>Signup</div>
         </Link>
         <Link to="*">
         <div style={{ cursor: 'pointer',color: 'white' }}>not found</div>
