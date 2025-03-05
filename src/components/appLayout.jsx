@@ -38,7 +38,7 @@ const AppLayout = ({ children }) => {
         }}
       >
         <div className="demo-logo" />
-        {/* <Menu
+        <Menu
           onClick={(data) => {navigate(data.key)}}
           theme="dark"
           mode="horizontal"
@@ -48,8 +48,8 @@ const AppLayout = ({ children }) => {
             flex: 1,
             minWidth: 0,
           }}
-        /> */}
-        <div style={{display: 'flex',width: '100%',gap: '10px',}}>
+        />
+        {/* <div style={{display: 'flex',width: '100%',gap: '10px',}}>
 
         <Link to="/home" >
         <div style={{ cursor: 'pointer',color: 'white' }}>Home</div>
@@ -70,7 +70,7 @@ const AppLayout = ({ children }) => {
         <div style={{ cursor: 'pointer',color: 'white' }}>not found</div>
         </Link>
 
-        </div>
+        </div> */}
       </Header>
       <Content
         style={{
